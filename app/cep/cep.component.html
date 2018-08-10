@@ -1,0 +1,46 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Cep"></Label>
+</ActionBar>
+
+<StackLayout class="form">
+    
+    <GridLayout rows="auto, auto, auto, auto, auto, auto, auto, auto, auto">
+        <StackLayout row="0" class="input-field">
+                <Label [text]="'Logradouro ' + cep.logradouro"></Label>
+        </StackLayout>
+
+        <StackLayout row="1" class="input-field">
+                <Label [text]="'Complemento ' + cep.complemento"></Label>
+        </StackLayout>
+
+        <StackLayout row="2" class="input-field">                
+                <Label [text]="'Bairro ' + cep.bairro"></Label>
+        </StackLayout>
+
+        <StackLayout row="3" class="input-field">
+                <Label [text]="'Localidade ' + cep.localidade"></Label>
+        </StackLayout>
+
+        <StackLayout row="4" class="input-field">
+                <Label [text]="'UF ' + cep.uf"></Label>
+        </StackLayout>
+
+        <StackLayout row="5" class="input-field">
+                <Label [text]="'Unidade ' + cep.unidade"></Label>
+        </StackLayout>
+
+        <StackLayout row="6" class="input-field">
+                <Label [text]="'IBGE ' + cep.ibge"></Label>
+        </StackLayout>
+
+        <StackLayout row="7" class="input-field">
+                <Label [text]="'Gia ' + cep.gia"></Label>
+        </StackLayout>
+        <StackLayout row="8" class="input-field">
+                <TextField [(ngModel)]='cep.cep' ></TextField>
+        </StackLayout>
+    </GridLayout>
+
+    <Button class="btn btn-primary btn-active" id="button" text="Buscar cep" (tap)="getCep()"></Button>
+    
+</StackLayout>
